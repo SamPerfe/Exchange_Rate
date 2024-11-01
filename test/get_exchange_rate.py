@@ -6,7 +6,6 @@ library_path = dirname(dirname(__file__)) + r"/src"
 sys.path.append(library_path)
 
 import utils
-from exchange_rate import get_real_time_exchange_rate
 
 class test(unittest.TestCase):
 
@@ -20,7 +19,6 @@ class test(unittest.TestCase):
 
         result = float(1.0868)
         test = utils.get_price(from_curr=curr_base, to_curr=curr_dest)
-        test = float(test)
 
         msg_fail = "Please check the currency symbols"
 
