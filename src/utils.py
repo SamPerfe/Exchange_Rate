@@ -12,5 +12,5 @@ def get_price(from_curr:str, to_curr:str, class_html="AHmHk"):
 
     page = requests.get(get_url(from_curr,to_curr))
     price = BeautifulSoup(page.content, "html.parser").find("div", {"class":{class_html}}).text
-
+    
     return price
